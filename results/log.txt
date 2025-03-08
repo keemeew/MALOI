@@ -1,0 +1,36 @@
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 11 5 &
+make mtl_11_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 11 5 &
+make mtl_11_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 11 5 &
+make mtl_11_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 11 5 &
+make mtl_11_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 11 5 &
+make mtl_11_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 11 5 &
+make mtl_11_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 11 5 &
+make mtl_11_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 11 5 &
+make mtl_11_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 15 5 &
+make mtl_15_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 15 5 &
+make mtl_15_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 15 5 &
+make mtl_15_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 15 5 &
+make mtl_15_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 11 5 &
+make mtl_11_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 11 5 &
+make mtl_11_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 11 5 &
+make mtl_11_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 11 5 &
+make mtl_11_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 11 5 &
+make mtl_11_5
+nohup /home/mnc/mnc/MARTINI/magazine/insert_rule.sh mtl 11 5 &
+make mtl_11_5

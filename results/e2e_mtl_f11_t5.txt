@@ -1,0 +1,1 @@
+average hop latency = 10.019746506986044

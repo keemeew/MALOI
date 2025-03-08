@@ -1,0 +1,543 @@
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 9: /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f15_t5.txt: No such file or directory
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 140333
+140335
+Killing process 140333
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (140333) - Operation not permitted
+Killing process 140335
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (140335) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f15_t3.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+Could not connect to any of [('127.0.0.1', 9090)]
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is not running.
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 143292
+143294
+Killing process 143292
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (143292) - Operation not permitted
+Killing process 143294
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (143294) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 147423
+147425
+Killing process 147423
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (147423) - Operation not permitted
+Killing process 147425
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (147425) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 148633
+148635
+Killing process 148633
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (148633) - Operation not permitted
+Killing process 148635
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (148635) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 149798
+149800
+Killing process 149798
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (149798) - Operation not permitted
+Killing process 149800
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (149800) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 150954
+150955
+Killing process 150954
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (150954) - Operation not permitted
+Killing process 150955
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (150955) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t1.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 9: /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t1.txt: No such file or directory
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is not running.
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 9: /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt: No such file or directory
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 152820
+152822
+Killing process 152820
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (152820) - Operation not permitted
+Killing process 152822
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (152822) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 9: /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt: No such file or directory
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 153833
+153835
+Killing process 153833
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (153833) - Operation not permitted
+Killing process 153835
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (153835) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 9: /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt: No such file or directory
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 154058
+154060
+Killing process 154058
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (154058) - Operation not permitted
+Killing process 154060
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (154060) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+Could not connect to any of [('127.0.0.1', 9090)]
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is not running.
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+Could not connect to any of [('127.0.0.1', 9090)]
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is not running.
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+Could not connect to any of [('127.0.0.1', 9090)]
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is not running.
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 155529
+155531
+Killing process 155529
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (155529) - Operation not permitted
+Killing process 155531
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (155531) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 156628
+156630
+Killing process 156628
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (156628) - Operation not permitted
+Killing process 156630
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (156630) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 157825
+157827
+Killing process 157825
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (157825) - Operation not permitted
+Killing process 157827
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (157827) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 159007
+159009
+Killing process 159007
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (159007) - Operation not permitted
+Killing process 159009
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (159009) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 162521
+162522
+Killing process 162521
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (162521) - Operation not permitted
+Killing process 162522
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (162522) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 163856
+163858
+Killing process 163856
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (163856) - Operation not permitted
+Killing process 163858
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (163858) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 164954
+164956
+Killing process 164954
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (164954) - Operation not permitted
+Killing process 164956
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (164956) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 165947
+165949
+Killing process 165947
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (165947) - Operation not permitted
+Killing process 165949
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (165949) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 9: /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt: No such file or directory
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 167078
+167080
+Killing process 167078
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (167078) - Operation not permitted
+Killing process 167080
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (167080) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+Could not connect to any of [('127.0.0.1', 9090)]
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 168632
+168634
+Killing process 168632
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (168632) - Operation not permitted
+Killing process 168634
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (168634) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+Could not connect to any of [('127.0.0.1', 9090)]
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 169748
+169750
+Killing process 169748
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (169748) - Operation not permitted
+Killing process 169750
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (169750) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+Could not connect to any of [('127.0.0.1', 9090)]
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 170662
+170664
+Killing process 170662
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (170662) - Operation not permitted
+Killing process 170664
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (170664) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+Could not connect to any of [('127.0.0.1', 9090)]
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 171683
+171685
+Killing process 171683
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (171683) - Operation not permitted
+Killing process 171685
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (171685) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+Could not connect to any of [('127.0.0.1', 9090)]
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 172645
+172647
+Killing process 172645
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (172645) - Operation not permitted
+Killing process 172647
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (172647) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+Could not connect to any of [('127.0.0.1', 9090)]
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 173570
+173572
+Killing process 173570
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (173570) - Operation not permitted
+Killing process 173572
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (173572) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+receive.py is still running with PID(s): 182905
+182921
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is running with PID(s): 182956
+182957
+network.py is not running.
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+Could not connect to any of [('127.0.0.1', 9090)]
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is running with PID(s): 182956
+182957
+network.py is running with PID(s): 184547
+184549
+Killing process 184547
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (184547) - Operation not permitted
+Killing process 184549
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (184549) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 202192
+202194
+Killing process 202192
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (202192) - Operation not permitted
+Killing process 202194
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (202194) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is not running.
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is not running.
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is not running.
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is not running.
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is not running.
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is not running.
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is not running.
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 361448
+361450
+Killing process 361448
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (361448) - Operation not permitted
+Killing process 361450
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (361450) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 362702
+362703
+Killing process 362702
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (362702) - Operation not permitted
+Killing process 362703
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (362703) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 363875
+363877
+Killing process 363875
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (363875) - Operation not permitted
+Killing process 363877
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (363877) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+Could not connect to any of [('127.0.0.1', 9090)]
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is not running.
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f15_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 365335
+365337
+Killing process 365335
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (365335) - Operation not permitted
+Killing process 365337
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (365337) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 366504
+366506
+Killing process 366504
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (366504) - Operation not permitted
+Killing process 366506
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (366506) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is not running.
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 372000
+372002
+Killing process 372000
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (372000) - Operation not permitted
+Killing process 372002
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (372002) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 373408
+373410
+Killing process 373408
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (373408) - Operation not permitted
+Killing process 373410
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (373410) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 374994
+374996
+Killing process 374994
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (374994) - Operation not permitted
+Killing process 374996
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (374996) - Operation not permitted
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt --thrift-port 9090 >> /home/mnc/mnc/MARTINI/magazine/results/rule_log.txt
+All target scripts are stopped. Proceeding to kill network.py.
+receive.py is not running.
+send.py is not running.
+network.py is running with PID(s): 376575
+376577
+Killing process 376575
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (376575) - Operation not permitted
+Killing process 376577
+/home/mnc/mnc/MARTINI/magazine/insert_rule.sh: line 50: kill: (376577) - Operation not permitted

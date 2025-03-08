@@ -1,0 +1,580 @@
+pkg_info {
+  arch: "v1model"
+}
+actions {
+  preamble {
+    id: 30745121
+    name: "MyIngress.BuildInputFromLabeling"
+    alias: "BuildInputFromLabeling"
+  }
+}
+actions {
+  preamble {
+    id: 17172985
+    name: "MyIngress.LayerProcess1_6"
+    alias: "LayerProcess1_6"
+  }
+}
+actions {
+  preamble {
+    id: 20891148
+    name: "MyIngress.LayerProcess2_6"
+    alias: "LayerProcess2_6"
+  }
+}
+actions {
+  preamble {
+    id: 30910744
+    name: "MyIngress.XNOR_task6"
+    alias: "XNOR_task6"
+  }
+}
+actions {
+  preamble {
+    id: 17790103
+    name: "MyIngress.BitCount_t6_1"
+    alias: "BitCount_t6_1"
+  }
+}
+actions {
+  preamble {
+    id: 33329266
+    name: "MyIngress.BitCount_t6_2"
+    alias: "BitCount_t6_2"
+  }
+}
+actions {
+  preamble {
+    id: 31702080
+    name: "MyIngress.BitCount_t6_3"
+    alias: "BitCount_t6_3"
+  }
+}
+actions {
+  preamble {
+    id: 28629477
+    name: "MyIngress.BitCount_t6_4"
+    alias: "BitCount_t6_4"
+  }
+}
+actions {
+  preamble {
+    id: 19070586
+    name: "MyIngress.BitCount_t6_5"
+    alias: "BitCount_t6_5"
+  }
+}
+actions {
+  preamble {
+    id: 21584583
+    name: "MyIngress.BitCount_t6_6"
+    alias: "BitCount_t6_6"
+  }
+}
+actions {
+  preamble {
+    id: 25147189
+    name: "MyIngress.BitCount_t6_7"
+    alias: "BitCount_t6_7"
+  }
+}
+actions {
+  preamble {
+    id: 28906408
+    name: "MyIngress.BitCount_t6_8"
+    alias: "BitCount_t6_8"
+  }
+}
+actions {
+  preamble {
+    id: 24733713
+    name: "MyIngress.predict_task6"
+    alias: "predict_task6"
+  }
+}
+actions {
+  preamble {
+    id: 27720273
+    name: "MyIngress.LayerProcess1_12"
+    alias: "LayerProcess1_12"
+  }
+}
+actions {
+  preamble {
+    id: 22750667
+    name: "MyIngress.LayerProcess2_12"
+    alias: "LayerProcess2_12"
+  }
+}
+actions {
+  preamble {
+    id: 23208237
+    name: "MyIngress.XNOR_task12"
+    alias: "XNOR_task12"
+  }
+}
+actions {
+  preamble {
+    id: 19757334
+    name: "MyIngress.BitCount_t12_1"
+    alias: "BitCount_t12_1"
+  }
+}
+actions {
+  preamble {
+    id: 22349670
+    name: "MyIngress.BitCount_t12_2"
+    alias: "BitCount_t12_2"
+  }
+}
+actions {
+  preamble {
+    id: 27762699
+    name: "MyIngress.BitCount_t12_3"
+    alias: "BitCount_t12_3"
+  }
+}
+actions {
+  preamble {
+    id: 17386189
+    name: "MyIngress.BitCount_t12_4"
+    alias: "BitCount_t12_4"
+  }
+}
+actions {
+  preamble {
+    id: 22681455
+    name: "MyIngress.BitCount_t12_5"
+    alias: "BitCount_t12_5"
+  }
+}
+actions {
+  preamble {
+    id: 25736652
+    name: "MyIngress.BitCount_t12_6"
+    alias: "BitCount_t12_6"
+  }
+}
+actions {
+  preamble {
+    id: 31559946
+    name: "MyIngress.predict_task12"
+    alias: "predict_task12"
+  }
+}
+actions {
+  preamble {
+    id: 29174397
+    name: "MyIngress.LayerProcess1_10"
+    alias: "LayerProcess1_10"
+  }
+}
+actions {
+  preamble {
+    id: 32014054
+    name: "MyIngress.LayerProcess2_10"
+    alias: "LayerProcess2_10"
+  }
+}
+actions {
+  preamble {
+    id: 32959062
+    name: "MyIngress.XNOR_task10"
+    alias: "XNOR_task10"
+  }
+}
+actions {
+  preamble {
+    id: 24996722
+    name: "MyIngress.BitCount_t10_1"
+    alias: "BitCount_t10_1"
+  }
+}
+actions {
+  preamble {
+    id: 26808231
+    name: "MyIngress.BitCount_t10_2"
+    alias: "BitCount_t10_2"
+  }
+}
+actions {
+  preamble {
+    id: 33271919
+    name: "MyIngress.BitCount_t10_3"
+    alias: "BitCount_t10_3"
+  }
+}
+actions {
+  preamble {
+    id: 25984113
+    name: "MyIngress.predict_task10"
+    alias: "predict_task10"
+  }
+}
+actions {
+  preamble {
+    id: 23414221
+    name: "MyIngress.LayerProcess1_13"
+    alias: "LayerProcess1_13"
+  }
+}
+actions {
+  preamble {
+    id: 25657380
+    name: "MyIngress.LayerProcess2_13"
+    alias: "LayerProcess2_13"
+  }
+}
+actions {
+  preamble {
+    id: 17763463
+    name: "MyIngress.XNOR_task13"
+    alias: "XNOR_task13"
+  }
+}
+actions {
+  preamble {
+    id: 30499679
+    name: "MyIngress.BitCount_t13_1"
+    alias: "BitCount_t13_1"
+  }
+}
+actions {
+  preamble {
+    id: 20139555
+    name: "MyIngress.BitCount_t13_2"
+    alias: "BitCount_t13_2"
+  }
+}
+actions {
+  preamble {
+    id: 17148872
+    name: "MyIngress.BitCount_t13_3"
+    alias: "BitCount_t13_3"
+  }
+}
+actions {
+  preamble {
+    id: 29660998
+    name: "MyIngress.BitCount_t13_4"
+    alias: "BitCount_t13_4"
+  }
+}
+actions {
+  preamble {
+    id: 19936679
+    name: "MyIngress.predict_task13"
+    alias: "predict_task13"
+  }
+}
+actions {
+  preamble {
+    id: 22024334
+    name: "MyIngress.LayerProcess1_2"
+    alias: "LayerProcess1_2"
+  }
+}
+actions {
+  preamble {
+    id: 31276871
+    name: "MyIngress.LayerProcess2_2"
+    alias: "LayerProcess2_2"
+  }
+}
+actions {
+  preamble {
+    id: 22061069
+    name: "MyIngress.XNOR_task2"
+    alias: "XNOR_task2"
+  }
+}
+actions {
+  preamble {
+    id: 17815470
+    name: "MyIngress.BitCount_t2_1"
+    alias: "BitCount_t2_1"
+  }
+}
+actions {
+  preamble {
+    id: 20703238
+    name: "MyIngress.BitCount_t2_2"
+    alias: "BitCount_t2_2"
+  }
+}
+actions {
+  preamble {
+    id: 25927329
+    name: "MyIngress.BitCount_t2_3"
+    alias: "BitCount_t2_3"
+  }
+}
+actions {
+  preamble {
+    id: 29537039
+    name: "MyIngress.BitCount_t2_4"
+    alias: "BitCount_t2_4"
+  }
+}
+actions {
+  preamble {
+    id: 20855303
+    name: "MyIngress.BitCount_t2_5"
+    alias: "BitCount_t2_5"
+  }
+}
+actions {
+  preamble {
+    id: 26761404
+    name: "MyIngress.BitCount_t2_6"
+    alias: "BitCount_t2_6"
+  }
+}
+actions {
+  preamble {
+    id: 23970406
+    name: "MyIngress.BitCount_t2_7"
+    alias: "BitCount_t2_7"
+  }
+}
+actions {
+  preamble {
+    id: 19358169
+    name: "MyIngress.BitCount_t2_8"
+    alias: "BitCount_t2_8"
+  }
+}
+actions {
+  preamble {
+    id: 18965316
+    name: "MyIngress.predict_task2"
+    alias: "predict_task2"
+  }
+}
+registers {
+  preamble {
+    id: 379082955
+    name: "MyIngress.weights_bnn1_6"
+    alias: "weights_bnn1_6"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 45
+      }
+    }
+  }
+  size: 180
+}
+registers {
+  preamble {
+    id: 371261336
+    name: "MyIngress.weights_bnn2_6"
+    alias: "weights_bnn2_6"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 45
+      }
+    }
+  }
+  size: 180
+}
+registers {
+  preamble {
+    id: 381562566
+    name: "MyIngress.weights_task6"
+    alias: "weights_task6"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 45
+      }
+    }
+  }
+  size: 12
+}
+registers {
+  preamble {
+    id: 384606820
+    name: "MyIngress.weights_bnn1_12"
+    alias: "weights_bnn1_12"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 45
+      }
+    }
+  }
+  size: 180
+}
+registers {
+  preamble {
+    id: 372088272
+    name: "MyIngress.weights_bnn2_12"
+    alias: "weights_bnn2_12"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 45
+      }
+    }
+  }
+  size: 180
+}
+registers {
+  preamble {
+    id: 370771681
+    name: "MyIngress.weights_task12"
+    alias: "weights_task12"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 45
+      }
+    }
+  }
+  size: 12
+}
+registers {
+  preamble {
+    id: 381153274
+    name: "MyIngress.weights_bnn1_10"
+    alias: "weights_bnn1_10"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 45
+      }
+    }
+  }
+  size: 180
+}
+registers {
+  preamble {
+    id: 385333602
+    name: "MyIngress.weights_bnn2_10"
+    alias: "weights_bnn2_10"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 45
+      }
+    }
+  }
+  size: 180
+}
+registers {
+  preamble {
+    id: 382517319
+    name: "MyIngress.weights_task10"
+    alias: "weights_task10"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 45
+      }
+    }
+  }
+  size: 12
+}
+registers {
+  preamble {
+    id: 384735848
+    name: "MyIngress.weights_bnn1_13"
+    alias: "weights_bnn1_13"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 45
+      }
+    }
+  }
+  size: 180
+}
+registers {
+  preamble {
+    id: 370249625
+    name: "MyIngress.weights_bnn2_13"
+    alias: "weights_bnn2_13"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 45
+      }
+    }
+  }
+  size: 180
+}
+registers {
+  preamble {
+    id: 385078930
+    name: "MyIngress.weights_task13"
+    alias: "weights_task13"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 45
+      }
+    }
+  }
+  size: 12
+}
+registers {
+  preamble {
+    id: 374132277
+    name: "MyIngress.weights_bnn1_2"
+    alias: "weights_bnn1_2"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 45
+      }
+    }
+  }
+  size: 180
+}
+registers {
+  preamble {
+    id: 370573699
+    name: "MyIngress.weights_bnn2_2"
+    alias: "weights_bnn2_2"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 45
+      }
+    }
+  }
+  size: 180
+}
+registers {
+  preamble {
+    id: 371713436
+    name: "MyIngress.weights_task2"
+    alias: "weights_task2"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 45
+      }
+    }
+  }
+  size: 12
+}
+type_info {
+}
