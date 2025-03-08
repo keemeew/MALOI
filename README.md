@@ -34,7 +34,7 @@ To run MARLOI, the following dependencies must be installed:
 
 ### Clone Repository
 ```bash
-git clone <https://github.com/keemeew/MALOI>
+git clone https://github.com/keemeew/MALOI
 ```
 ---
 ### Compile and Run P4 Programs [Terminal 1]
