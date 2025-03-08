@@ -30,8 +30,13 @@ To run MARLOI, the following dependencies must be installed:
 - **Bmv2**: [https://github.com/p4lang/behavioral-model](https://github.com/p4lang/behavioral-model)
 - **Mininet**: [https://github.com/mininet/mininet](https://github.com/mininet/mininet)
 
-## Execution Steps
-
+## Simulation Steps
+For each classification data in a packet, inference switch simultaneously conducts 5 classification tasks (i.e., Workclass, Marital-status, Sex, Capital-loss, Hours-per-week).
+This repository includes three cases of in-network inference schemes to show the effectiveness of MALOI. 
+- STL w/ 15 features
+- MTL w/ 15 features (MALOI)
+- MTL w/ 11 features (MALOI)
+- 
 ### Clone Repository
 ```bash
 git clone https://github.com/keemeew/MALOI
