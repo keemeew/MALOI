@@ -31,7 +31,7 @@ To run MARLOI, the following dependencies must be installed:
 - **Mininet**: [https://github.com/mininet/mininet](https://github.com/mininet/mininet)
 
 ## Simulation Steps
-For each classification data in a packet, inference switch simultaneously conducts 5 classification tasks (i.e., Workclass, Marital-status, Sex, Capital-loss, Hours-per-week).
+For each classification data in a packet, inference switch simultaneously conducts inference for 5 classification tasks (i.e., Workclass, Marital-status, Sex, Capital-loss, Hours-per-week).
 
 This repository includes the following three in-network inference schemes. 
 - STL w/ 15 features (P4-BNN)
