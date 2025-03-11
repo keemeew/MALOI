@@ -17,8 +17,7 @@ Stores task-specific model weights and lookup tables used for inference. These r
 
 ### `packets`
 Handles core networking functionalities, including:
-- Packet transmission and reception.
-- Mininet-based testbed setup.
+- Packet sending and receiving.
 - Logging and result collection.
 
 ### `results`
@@ -30,7 +29,7 @@ To run MARLOI, the following dependencies must be installed:
 - **Bmv2**: [https://github.com/p4lang/behavioral-model](https://github.com/p4lang/behavioral-model)
 - **Mininet**: [https://github.com/mininet/mininet](https://github.com/mininet/mininet)
 
-## Simulation
+## Simulation 
 For each classification data in a packet, inference switch simultaneously conducts inference for 5 classification tasks (i.e., Workclass, Marital-status, Sex, Capital-loss, Hours-per-week).
 
 This repository includes the following three in-network inference schemes. 
