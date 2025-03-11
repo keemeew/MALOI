@@ -30,11 +30,17 @@ To run MARLOI, the following dependencies must be installed:
 - **Bmv2**: [https://github.com/p4lang/behavioral-model](https://github.com/p4lang/behavioral-model)
 - **Mininet**: [https://github.com/mininet/mininet](https://github.com/mininet/mininet)
 
-## Execution Steps
+## Simulation Steps
+For each classification data in a packet, inference switch simultaneously conducts inference for 5 classification tasks (i.e., Workclass, Marital-status, Sex, Capital-loss, Hours-per-week).
+
+This repository includes the following three in-network inference schemes. 
+- STL w/ 15 features (P4-BNN)
+- MTL w/ 15 features (MALOI)
+- MTL w/ 11 features (MALOI)
 
 ### Clone Repository
 ```bash
-git clone <https://github.com/your-repo/MALOI> 링크 수정 필요
+git clone https://github.com/keemeew/MALOI
 ```
 ---
 ### Compile and Run P4 Programs [Terminal 1]
@@ -68,15 +74,15 @@ sudo simple_switch --log-console -i 0@veth0 -i 2@veth2 --thrift-port 9090 mtl_f1
 ### Load Model Weights [Terminal 3]
 *STL 15 features*
 ```bash
-/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI --thrift-port 9090 < /home/mnc/mnc/MARTINI/magazine/p4src/rule/stl_f15_t5.txt
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI --thrift-port 9090 < ~/p4src/rule/stl_f15_t5.txt
 ```
 *MTL 15 features*
 ```bash
-/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI --thrift-port 9090 < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f15_t5.txt
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI --thrift-port 9090 < ~/p4src/rule/mtl_f15_t5.txt
 ```
 *MTL 11 features*
 ```bash
-/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI --thrift-port 9090 < /home/mnc/mnc/MARTINI/magazine/p4src/rule/mtl_f11_t5.txt
+/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI --thrift-port 9090 < ~/p4src/rule/mtl_f11_t5.txt
 ```
 ### Start Packet Transmission and Reception
 *STL 15 features*

@@ -150,8 +150,6 @@ def create_packet(iface, src_ip, dst_ip, feature, features, tasks, i):
     return pkt
 
 def main(args):
-    # file_name = f"/home/mnc/mnc/MARTINI/magazine/results/SendPkt_{args.mode}_f{args.f}_t{args.t}.txt"
-    # sys.stdout = open(file_name,'w')
 
     input_features_file_path = f"/home/mnc/mnc/MARTINI/magazine/data/input/input_f{args.f}.txt"
     features = read_features(input_features_file_path)
@@ -159,8 +157,6 @@ def main(args):
     src_ip = "10.10.0.1"
     dst_ip = "10.10.0.2"
     
-    # ifaces = [i for i in os.listdir('/sys/class/net/') if 'eth' in i]
-    # iface = ifaces[0]
     iface = "veth0"
     
     bind_feature_layers(args.f, args.t)
@@ -171,8 +167,6 @@ def main(args):
         pkts.append(pkt)
     
     pkt_id = []
-    # features = []
-    # prediction = []
     send_time = []
     print("No, Features, Prediction, Time")
     for pkt in pkts:
@@ -182,7 +176,6 @@ def main(args):
 
         sendp(pkt, iface=iface,verbose=False)
         pkt_id.append(pkt[IP].id)
-        # sleep(0.0001)
     for i in range(len(pkts)):
         print(pkt_id[i], send_time[i])
 

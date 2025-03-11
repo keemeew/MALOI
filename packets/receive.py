@@ -15,18 +15,15 @@ parser.add_argument('--f', help='Number of features', type=int, required=True)
 parser.add_argument('--t', help='Number of tasks', type=int, required=True)
 args = parser.parse_args()
 
-# 사용할 태스크 목록
 TASKS = [2, 6, 10, 12, 13]
 LABELS = {}
 
-# Accuracy 계산을 위한 변수
 correct_predictions = 0
 total_predictions = 0
-packet_count = 0  # 패킷 개수 카운트
-lock = threading.Lock()  # Accuracy 갱신 시 동기화
-log_entries = []  # 로그를 저장할 리스트
+packet_count = 0 
+lock = threading.Lock()  
+log_entries = [] 
 
-# 정답 라벨 파일을 로드하는 함수
 def load_labels():
     global LABELS
     label_dir = "/home/mnc/mnc/MARTINI/magazine/data/test_labels"
@@ -40,7 +37,6 @@ def load_labels():
             print(f"Warning: Label file {label_file} not found!")
             LABELS[task] = []
 
-# 패킷 구조 정의
 class Features_15(Packet):
     name = "Features"
     fields_desc = [BitField("features", 0, 90), BitField("padding", 0, 6)]
@@ -104,19 +100,16 @@ def bind_task_layers(feature_layer, tasks):
         print("Invalid number of tasks")
         sys.exit(1)
 
-# Accuracy 업데이트
 def update_accuracy(predictions, packet_idx):
     global correct_predictions, total_predictions
 
     if packet_idx < len(next(iter(LABELS.values()))):  # 모든 task에서 동일한 패킷 수를 가정
         correct = sum(1 for i, task in enumerate(TASKS) if predictions[i] == LABELS[task][packet_idx])
 
-        with lock:  # 동기화
+        with lock: 
             correct_predictions += correct
             total_predictions += len(TASKS)
 
-# 패킷 정보 출력 및 로그 저장
-# 패킷 정보 출력 및 로그 저장
 def print_packet_info(pkt, features, tasks, idx, start_time):
     if tasks == 1:
         prediction = [pkt[Labelling_1].prediction_1]
@@ -132,31 +125,24 @@ def print_packet_info(pkt, features, tasks, idx, start_time):
             pkt[Labelling_5].prediction_5
         ]
 
-    # **튜플을 "(a b c d e)" 형태의 문자열로 변환**
     str_format_prediction = f"({' '.join(map(str, prediction))})"
 
-    # Accuracy 업데이트
     update_accuracy(prediction, idx)
 
-    # Accuracy 계산
     with lock:
         accuracy = (correct_predictions / total_predictions) * 100 if total_predictions > 0 else 0
 
     mac_addr = pkt[Ether].dst
     sec = int(mac_addr.replace(':', ''), 16) / 1000
 
-    # **터미널 출력 형식**
     print(f"No: {pkt[IP].id}, Classification label: {str_format_prediction}, Hop latency [us]: {sec:.3f},  Accuracy [%]: {accuracy:.3f}", flush=True)
 
-    # **로그 저장 형식 (테이블 형식 유지)**
     log_entry = "{:<10} {:<15} {:<20.3f} {:<20.3f}".format(
         pkt[IP].id, str_format_prediction, sec, accuracy
     )
 
-    # 로그 리스트에 추가
     log_entries.append(log_entry)
 
-    # **실시간 로그 파일 저장**
     with open(log_file, "a") as f:
         f.write(log_entry + "\n")
 
@@ -168,19 +154,16 @@ def handle_pkt(pkt, start_time):
         packet_count += 1
 
 def receive_packet():
-    sniff(iface=iface, prn=lambda pkt: handle_pkt(pkt, start_time), store = False) # store option false로 해서 먼저 해보자.
+    sniff(iface=iface, prn=lambda pkt: handle_pkt(pkt, start_time), store = False)
 
 def main():
     global iface, start_time, log_file, packet_count
     packet_count = 0
     start_time = time.time()
-    # 정답 라벨 로드
     load_labels()
 
     log_file = f"/home/mnc/mnc/MARTINI/magazine/results/RecvPkt_{args.mode}_f{args.f}_t{args.t}.txt"
 
-    # ifaces = [i for i in os.listdir('/sys/class/net/') if 'eth' in i]
-    # iface = ifaces[0]
     iface = "veth2"
     bind_feature_layers(args.f, args.t)
 
@@ -196,9 +179,8 @@ def main():
 
     try:
         while True:
-            time.sleep(0.1)  # 계속 실행
+            time.sleep(0.1)  
     except KeyboardInterrupt:
-        # 종료 시 로그 파일에 한 번에 기록
         with open(log_file, "w") as f:
             f.write("Predictions: (Task 2, Task 6, Task 10, Task 12, Task 13)\n\n")
             f.write(log_header + '\n')
