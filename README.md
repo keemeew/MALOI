@@ -47,6 +47,7 @@ git clone https://github.com/keemeew/MALOI
 ---
 ### Compile and Run P4 Programs [Terminal 1]
 
+*Enter p4src folder*
 ```bash
 cd p4src
 ```
@@ -64,6 +65,7 @@ p4c-bm2-ss --target bmv2 --arch v1model -o mtl_f11_t5.json mtl_f11_t5.p4
 ```
 ### Execute the Switch Program [Terminal 2]
 
+*Enter p4src folder*
 ```bash
 cd p4src
 ```
@@ -82,6 +84,7 @@ sudo simple_switch --log-console -i 0@veth0 -i 2@veth2 --thrift-port 9090 mtl_f1
 
 ### Load Model Weights [Terminal 3]
 
+*Enter rule folder*
 ```bash
 cd ./p4src/rule
 ```
@@ -100,6 +103,7 @@ cd ./p4src/rule
 
 ### Start Packet Transmission and Reception
 
+*Enter packets folder*
 ```bash
 cd packets
 ```
