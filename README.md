@@ -82,6 +82,10 @@ sudo simple_switch --log-console -i 0@veth0 -i 2@veth2 --thrift-port 9090 mtl_f1
 ```
 
 ### Load Model Weights [Terminal 3]
+
+```bash
+cd ./p4src/rule
+```
 *STL 15 features*
 ```bash
 /home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI --thrift-port 9090 < ~/p4src/rule/stl_f15_t5.txt
@@ -96,6 +100,10 @@ sudo simple_switch --log-console -i 0@veth0 -i 2@veth2 --thrift-port 9090 mtl_f1
 ```
 
 ### Start Packet Transmission and Reception
+
+```bash
+cd packets
+```
 *STL 15 features*
 ```bash
 [Terminal 4]
