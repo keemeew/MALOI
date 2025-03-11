@@ -30,7 +30,7 @@ To run MARLOI, the following dependencies must be installed:
 - **Bmv2**: [https://github.com/p4lang/behavioral-model](https://github.com/p4lang/behavioral-model)
 - **Mininet**: [https://github.com/mininet/mininet](https://github.com/mininet/mininet)
 
-## Simulation Steps
+## Simulation
 For each classification data in a packet, inference switch simultaneously conducts inference for 5 classification tasks (i.e., Workclass, Marital-status, Sex, Capital-loss, Hours-per-week).
 
 This repository includes the following three in-network inference schemes. 
@@ -38,14 +38,19 @@ This repository includes the following three in-network inference schemes.
 - MTL w/ 15 features (MALOI)
 - MTL w/ 11 features (MALOI)
 
+## Execution Steps
+Use the following command to compile and deploy MALOI on the programmable switch:
+
 ### Clone Repository
 ```bash
 git clone https://github.com/keemeew/MALOI
 ```
 ---
 ### Compile and Run P4 Programs [Terminal 1]
-Use the following command to compile and deploy MARTINI on the Bmv2 switch:
 
+```bash
+cd p4src
+```
 *STL 15 features*
 ```bash
 p4c-bm2-ss --target bmv2 --arch v1model -o stl_f15_t5.json stl_f15_t5.p4
@@ -59,6 +64,10 @@ p4c-bm2-ss --target bmv2 --arch v1model -o mtl_f15_t5.json mtl_f15_t5.p4
 p4c-bm2-ss --target bmv2 --arch v1model -o mtl_f11_t5.json mtl_f11_t5.p4
 ```
 ### Execute the Switch Program [Terminal 2]
+
+```bash
+cd p4src
+```
 *STL 15 features*
 ```bash
 sudo simple_switch --log-console -i 0@veth0 -i 2@veth2 --thrift-port 9090 stl_f15_t5.json
@@ -71,6 +80,7 @@ sudo simple_switch --log-console -i 0@veth0 -i 2@veth2 --thrift-port 9090 mtl_f1
 ```bash
 sudo simple_switch --log-console -i 0@veth0 -i 2@veth2 --thrift-port 9090 mtl_f11_t5.json
 ```
+
 ### Load Model Weights [Terminal 3]
 *STL 15 features*
 ```bash
@@ -84,6 +94,7 @@ sudo simple_switch --log-console -i 0@veth0 -i 2@veth2 --thrift-port 9090 mtl_f1
 ```bash
 /home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI --thrift-port 9090 < ~/p4src/rule/mtl_f11_t5.txt
 ```
+
 ### Start Packet Transmission and Reception
 *STL 15 features*
 ```bash
