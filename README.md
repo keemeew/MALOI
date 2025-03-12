@@ -45,7 +45,7 @@ Use the following command to compile and deploy MALOI on the programmable switch
 git clone https://github.com/keemeew/MALOI
 ```
 ---
-### Compile and Run P4 Programs [Terminal 1]
+### Compile P4 Program [Terminal 1]
 
 *Enter p4src folder*
 ```bash
@@ -63,7 +63,7 @@ p4c-bm2-ss --target bmv2 --arch v1model -o mtl_f15_t5.json mtl_f15_t5.p4
 ```bash
 p4c-bm2-ss --target bmv2 --arch v1model -o mtl_f11_t5.json mtl_f11_t5.p4
 ```
-### Execute the Switch Program [Terminal 2]
+### Execute Programmable Switch [Terminal 2]
 
 *Enter p4src folder*
 ```bash
@@ -82,7 +82,7 @@ sudo simple_switch --log-console -i 0@veth0 -i 2@veth2 --thrift-port 9090 mtl_f1
 sudo simple_switch --log-console -i 0@veth0 -i 2@veth2 --thrift-port 9090 mtl_f11_t5.json
 ```
 
-### Load Model Weights [Terminal 3]
+### Load Model Weights on the Switch [Terminal 3]
 
 *Enter rule folder*
 ```bash
@@ -90,18 +90,18 @@ cd ./p4src/rule
 ```
 *STL 15 features*
 ```bash
-/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI --thrift-port 9090 < ~/p4src/rule/stl_f15_t5.txt
+~/behavioral-model/targets/simple_switch/simple_switch_CLI --thrift-port 9090 < ~/p4src/rule/stl_f15_t5.txt
 ```
 *MTL 15 features*
 ```bash
-/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI --thrift-port 9090 < ~/p4src/rule/mtl_f15_t5.txt
+~/behavioral-model/targets/simple_switch/simple_switch_CLI --thrift-port 9090 < ~/p4src/rule/mtl_f15_t5.txt
 ```
 *MTL 11 features*
 ```bash
-/home/mnc/mnc/behavioral-model/targets/simple_switch/simple_switch_CLI --thrift-port 9090 < ~/p4src/rule/mtl_f11_t5.txt
+~/behavioral-model/targets/simple_switch/simple_switch_CLI --thrift-port 9090 < ~/p4src/rule/mtl_f11_t5.txt
 ```
 
-### Start Packet Transmission and Reception
+### Start Packet Sending and Receiving
 
 *Enter packets folder*
 ```bash
