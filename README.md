@@ -5,7 +5,7 @@
 <p align="center">
 <img src="figures/MTL.png" alt="MALOI Overview" width="600">
 
-MALOI applies multi-task learning (MTL) in programmable data planes (PDP) to efficiently handle multiple inference tasks with minimal overhead (e.g., memory and processing delay). By sharing hidden layer parameters and selecting essential features, MALOI reduces memory usage and inference delay while maintaining comparable accuracy.
+MALOI applies multi-task learning (MTL) in programmable data planes (PDP) to efficiently handle multiple inference tasks with minimal overhead (e.g., memory and processing delay). Furthermore, MALOI selects a part of essential features and compresses the inference model accordingly. By sharing hidden layer parameters and selecting essential features, MALOI reduces memory usage and inference delay while maintaining comparable accuracy. 
 
 ## Evaluation Results
 
