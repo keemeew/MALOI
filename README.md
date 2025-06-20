@@ -23,5 +23,5 @@ Use the following command to compile and deploy MALOI on the programmable switch
 ### Processing Delays 
 | Census Income | 
 |------------------|
-| <img src="figures/figures/graph_3.png" alt="Census Income Delay" width="400"> |
+| <img src="figures/graph_3.png" alt="Census Income Delay" width="400"> |
 
