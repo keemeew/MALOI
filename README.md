@@ -8,7 +8,8 @@
 MALOI applies multi-task learning (MTL) in programmable data planes (PDP) to efficiently handle multiple inference tasks with minimal overhead (e.g., memory and processing delay). By sharing hidden layer parameters and selecting essential features, MALOI reduces memory usage and inference delay while maintaining comparable accuracy.
 
 ## Evaluation Results
-Use the following command to compile and deploy MALOI on the programmable switch:
+
+We conducted tests on an Wedge100BF-32X Tofino switch. Memory usage and processing delay correspond to # of SRAM blocks and end-to-end delay to escape recirculation in the switch, respectively. We considered two datasets, Census Income and ISCXVPN2016 + ISCXTor2016, for real-world scenario and network scenario, respectively.
 
 ### Accuracy and Memory Reduction According to # of Tasks 
 | Census Income | ISCX VPN and Tor | 
