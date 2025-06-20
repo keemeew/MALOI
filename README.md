@@ -13,12 +13,12 @@ Use the following command to compile and deploy MALOI on the programmable switch
 ### Accuracy and Memory Reduction According to # of Tasks 
 | Census Income | ISCX VPN and Tor | 
 |------------------|------------------|
-| <img src="graph_1.png" alt="Census Income Tasks" width="400"> | <img src="graph_1_network.png" alt="ISCX VPN and Tor Tasks" width="400"> | 
+| <img src="figures/graph_1.png" alt="Census Income Tasks" width="400"> | <img src="figures/graph_1_network.png" alt="ISCX VPN and Tor Tasks" width="400"> | 
 
 ### Accuracy and Memory Reduction According to # of Features 
 | Census Income | ISCX VPN and Tor | 
 |------------------|------------------|
-| <img src="graph_2.png" alt="Census Income Features" width="400"> | <img src="graph_2_network.png" alt="ISCX VPN and Tor Features" width="400"> | 
+| <img src="figures/graph_2.png" alt="Census Income Features" width="400"> | <img src="figures/graph_2_network.png" alt="ISCX VPN and Tor Features" width="400"> | 
 
 ### Processing Delays 
 | Census Income | 
