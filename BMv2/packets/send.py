@@ -38,7 +38,7 @@ class Labelling_1(Packet):
     name = "Prediction results"
     fields_desc = [
         BitField("prediction_1", 0, 4),
-        BitField("padding", 0, 4)]
+        BitField("task_id", 0, 4)]
 
 class Labelling_3(Packet):
     name = "Prediction results"
@@ -46,7 +46,7 @@ class Labelling_3(Packet):
         BitField("prediction_1", 0, 4),
         BitField("prediction_2", 0, 4),
         BitField("prediction_3", 0, 4),
-        BitField("padding", 0, 4)]
+        BitField("task_id", 0, 4)]
     
 class Labelling_5(Packet):
     name = "Prediction results"
@@ -56,7 +56,7 @@ class Labelling_5(Packet):
         BitField("prediction_3", 0, 4),
         BitField("prediction_4", 0, 4),
         BitField("prediction_5", 0, 4),
-        BitField("padding", 0, 4)]
+        BitField("task_id", 0, 4)]
     
 class Labelling_7(Packet):
     name = "Prediction results"
@@ -68,7 +68,7 @@ class Labelling_7(Packet):
         BitField("prediction_5", 0, 4),
         BitField("prediction_6", 0, 4),
         BitField("prediction_7", 0, 4),
-        BitField("padding", 0, 4)]
+        BitField("task_id", 0, 4)]
     
 class Labelling_9(Packet):
     name = "Prediction results"
@@ -82,7 +82,7 @@ class Labelling_9(Packet):
         BitField("prediction_7", 0, 4),
         BitField("prediction_8", 0, 4),
         BitField("prediction_9", 0, 4),
-        BitField("padding", 0, 4)]
+        BitField("task_id", 0, 4)]
 
 def read_features(filepath):
     features = []
@@ -94,7 +94,7 @@ def read_features(filepath):
 
 def bind_feature_layers(features, tasks):
     if features == 15:
-        bind_layers(IP, Features_15)
+        bind_layers(IP, Features_15, proto=200)
         bind_task_layers(Features_15, tasks)
     elif features == 10:
         bind_layers(IP, Features_10)
@@ -103,7 +103,7 @@ def bind_feature_layers(features, tasks):
         bind_layers(IP, Features_5)
         bind_task_layers(Features_5, tasks)
     elif features == 11:
-        bind_layers(IP, Features_11, proto=200)
+        bind_layers(IP, Features_11)
         bind_task_layers(Features_11, tasks)
     else:
         print("Invalid number of features")
@@ -124,7 +124,7 @@ def bind_task_layers(feature_layer, tasks):
         print("Invalid number of tasks")
         sys.exit(1)
 
-def create_packet(iface, src_ip, dst_ip, feature, features, tasks, i):
+def create_packet(iface, src_ip, dst_ip, feature, features, tasks, i, task_id=0):
     pkt = Ether(src=get_if_hwaddr(iface), dst='ff:ff:ff:ff:ff:ff')
     pkt = pkt / IP(src=src_ip, dst=dst_ip, proto=200, id=i)
     if features == 15:
@@ -137,22 +137,24 @@ def create_packet(iface, src_ip, dst_ip, feature, features, tasks, i):
         pkt = pkt / Features_11(features=feature)
     
     if tasks == 1:
-        pkt = pkt / Labelling_1()
+        pkt = pkt / Labelling_1(task_id=task_id)
     elif tasks == 3:
-        pkt = pkt / Labelling_3()
+        pkt = pkt / Labelling_3(task_id=task_id)
     elif tasks == 5:
-        pkt = pkt / Labelling_5()
+        pkt = pkt / Labelling_5(task_id=task_id)
     elif tasks == 7:
-        pkt = pkt / Labelling_7()
+        pkt = pkt / Labelling_7(task_id=task_id)
     elif tasks == 9:
-        pkt = pkt / Labelling_9()
+        pkt = pkt / Labelling_9(task_id=task_id)
     pkt = pkt / UDP(dport=1234)
+    
     return pkt
 
 def main(args):
 
-    input_features_file_path = f"/home/mnc/mnc/MARTINI/magazine/data/input/input_f{args.f}.txt"
+    input_features_file_path = f"../data/census/input/input_f{args.f}.txt"
     features = read_features(input_features_file_path)
+    
 
     src_ip = "10.10.0.1"
     dst_ip = "10.10.0.2"
@@ -163,7 +165,7 @@ def main(args):
     
     pkts = []
     for i, feature in enumerate(features):
-        pkt = create_packet(iface, src_ip, dst_ip, feature, args.f, args.t, i)
+        pkt = create_packet(iface, src_ip, dst_ip, feature, args.f, args.t, i, task_id=args.task_id)
         pkts.append(pkt)
     
     pkt_id = []
@@ -175,6 +177,7 @@ def main(args):
         pkt.show()
 
         sendp(pkt, iface=iface,verbose=False)
+        sleep(0.1)
         pkt_id.append(pkt[IP].id)
     for i in range(len(pkts)):
         print(pkt_id[i], send_time[i])
@@ -184,5 +187,6 @@ if __name__ == '__main__':
     parser.add_argument('--mode', help='mtl or stl', type=str, required=True)
     parser.add_argument('--f', help='Number of features', type=int, required=True)
     parser.add_argument('--t', help='Number of tasks', type=int, required=True)
+    parser.add_argument('--task_id', help='Task ID', type=int, default=0)
     args = parser.parse_args()
     main(args)

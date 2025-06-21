@@ -119,3 +119,17 @@ sudo python3 receive.py --mode mtl --f 11 --t 5
 [Terminal 5]
 sudo python3 send.py --mode mtl --f 11 --t 5
 ```
+
+### Task Selection Mode
+We provide the task selection mode to support the case when you only want to know inference result of specific task. While the overall operational progress is similar with the normal mode, please make the following changes:
+*Compile and execute task selection P4 code*
+```bash
+p4c-bm2-ss --target bmv2 --arch v1model -o mtl_f11_t5_task_selection.json mtl_f11_t5_task selection.p4
+sudo simple_switch --log-console -i 0@veth0 -i 2@veth2 --thrift-port 9090 mtl_f11_t5_task_selection.json
+```
+*Specify desired task ID on sender and receiver*
+```bash
+sudo python3 send.py --mode mtl --f 15 --t 5 --task_id 2
+sudo python3 receive.py --mode mtl --f 15 --t 5 --task_id 2
+``` 
+Note that if you don't specify any task ID on sender and receiver or use task ID 0, they will perform as normal mode (i.e., show evey task result).

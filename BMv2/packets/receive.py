@@ -13,10 +13,16 @@ parser = argparse.ArgumentParser(description='receiver parser')
 parser.add_argument('--mode', help='MTL or STL', type=str, required=True)
 parser.add_argument('--f', help='Number of features', type=int, required=True)
 parser.add_argument('--t', help='Number of tasks', type=int, required=True)
+parser.add_argument('--task_id', help='Task ID', type=int, default=0)
 args = parser.parse_args()
 
 TASKS = [2, 6, 10, 12, 13]
 LABELS = {}
+
+# per-task accuracy
+task_correct_predictions = {task: 0 for task in TASKS}
+task_total_predictions = {task: 0 for task in TASKS}
+task_accuracies = {task: 0.0 for task in TASKS}
 
 correct_predictions = 0
 total_predictions = 0
@@ -26,7 +32,7 @@ log_entries = []
 
 def load_labels():
     global LABELS
-    label_dir = "/home/mnc/mnc/MARTINI/magazine/data/test_labels"
+    label_dir = "../data/census/test_labels/"
 
     for task in TASKS:
         label_file = os.path.join(label_dir, f"te_task{task}_label_i.txt")
@@ -55,21 +61,23 @@ class Features_5(Packet):
 
 class Labelling_1(Packet):
     name = "Prediction results"
-    fields_desc = [BitField("prediction_1", 0, 4), BitField("padding", 0, 4)]
+    fields_desc = [
+        BitField("prediction_1", 0, 4), BitField("task_id", 0, 4)
+    ]
 
 class Labelling_3(Packet):
     name = "Prediction results"
     fields_desc = [
-        BitField("prediction_1", 0, 4), BitField("prediction_2", 0, 4),
-        BitField("prediction_3", 0, 4), BitField("padding", 0, 4)
+        BitField("prediction_1", 0, 4), BitField("prediction_2", 0, 4), 
+        BitField("prediction_3", 0, 4), BitField("task_id", 0, 4)
     ]
 
 class Labelling_5(Packet):
     name = "Prediction results"
     fields_desc = [
-        BitField("prediction_1", 0, 4), BitField("prediction_2", 0, 4),
+        BitField("prediction_1", 0, 4), BitField("prediction_2", 0, 4), 
         BitField("prediction_3", 0, 4), BitField("prediction_4", 0, 4),
-        BitField("prediction_5", 0, 4), BitField("padding", 0, 4)
+        BitField("prediction_5", 0, 4), BitField("task_id", 0, 4)
     ]
 
 def bind_feature_layers(features, tasks):
@@ -100,34 +108,75 @@ def bind_task_layers(feature_layer, tasks):
         print("Invalid number of tasks")
         sys.exit(1)
 
-def update_accuracy(predictions, packet_idx):
-    global correct_predictions, total_predictions
+def update_accuracy(predictions, packet_idx, task_id):
+    global correct_predictions, total_predictions, task_correct_predictions, task_total_predictions
 
-    if packet_idx < len(next(iter(LABELS.values()))):  # 모든 task에서 동일한 패킷 수를 가정
-        correct = sum(1 for i, task in enumerate(TASKS) if predictions[i] == LABELS[task][packet_idx])
-
-        with lock: 
-            correct_predictions += correct
-            total_predictions += len(TASKS)
+    if packet_idx < len(next(iter(LABELS.values()))):
+        if task_id == 0:
+            correct = sum(1 for i, task in enumerate(TASKS) if predictions[i] == LABELS[task][packet_idx])
+            with lock:
+                correct_predictions += correct
+                total_predictions += len(TASKS)
+                for i, task in enumerate(TASKS):
+                    if predictions[i] == LABELS[task][packet_idx]:
+                        task_correct_predictions[task] += 1
+                    task_total_predictions[task] += 1
+        elif task_id in TASKS:
+            task_idx = TASKS.index(task_id)
+            if predictions[task_idx] == LABELS[task_id][packet_idx]:
+                with lock:
+                    correct_predictions += 1
+                    total_predictions += 1
+                    task_correct_predictions[task_id] += 1
+                    task_total_predictions[task_id] += 1
+            else:
+                with lock:
+                    total_predictions += 1
+                    task_total_predictions[task_id] += 1
 
 def print_packet_info(pkt, features, tasks, idx, start_time):
+    task_id = pkt[f'Labelling_{tasks}'].task_id
+    
     if tasks == 1:
         prediction = [pkt[Labelling_1].prediction_1]
     elif tasks == 3:
-        prediction = [
-            pkt[Labelling_3].prediction_1, pkt[Labelling_3].prediction_2,
-            pkt[Labelling_3].prediction_3
-        ]
+        if task_id == 0:
+            prediction = [
+                pkt[Labelling_3].prediction_1, pkt[Labelling_3].prediction_2,
+                pkt[Labelling_3].prediction_3
+            ]
+        else:
+            prediction = [0] * 3
+            if task_id == 2:
+                prediction[0] = pkt[Labelling_3].prediction_1
+            elif task_id == 6:
+                prediction[1] = pkt[Labelling_3].prediction_2
+            elif task_id == 10:
+                prediction[2] = pkt[Labelling_3].prediction_3
     elif tasks == 5:
-        prediction = [
-            pkt[Labelling_5].prediction_1, pkt[Labelling_5].prediction_2,
-            pkt[Labelling_5].prediction_3, pkt[Labelling_5].prediction_4,
-            pkt[Labelling_5].prediction_5
-        ]
+        if task_id == 0:
+            prediction = [
+                pkt[Labelling_5].prediction_1, pkt[Labelling_5].prediction_2,
+                pkt[Labelling_5].prediction_3, pkt[Labelling_5].prediction_4,
+                pkt[Labelling_5].prediction_5
+            ]
+        # read predictions for task_id only
+        else:
+            prediction = [0] * 5
+            if task_id == 2:
+                prediction[0] = pkt[Labelling_5].prediction_1
+            elif task_id == 6:
+                prediction[1] = pkt[Labelling_5].prediction_2
+            elif task_id == 10:
+                prediction[2] = pkt[Labelling_5].prediction_3
+            elif task_id == 12:
+                prediction[3] = pkt[Labelling_5].prediction_4
+            elif task_id == 13:
+                prediction[4] = pkt[Labelling_5].prediction_5         
 
     str_format_prediction = f"({' '.join(map(str, prediction))})"
 
-    update_accuracy(prediction, idx)
+    update_accuracy(prediction, idx, task_id)
 
     with lock:
         accuracy = (correct_predictions / total_predictions) * 100 if total_predictions > 0 else 0
@@ -135,10 +184,10 @@ def print_packet_info(pkt, features, tasks, idx, start_time):
     mac_addr = pkt[Ether].dst
     sec = int(mac_addr.replace(':', ''), 16) / 1000
 
-    print(f"No: {pkt[IP].id}, Classification label: {str_format_prediction}, Hop latency [us]: {sec:.3f},  Accuracy [%]: {accuracy:.3f}", flush=True)
+    print(f"No: {pkt[IP].id}, Task ID: {task_id}, Classification label: {str_format_prediction}, Hop latency [us]: {sec:.3f},  Accuracy [%]: {accuracy:.3f}", flush=True)
 
-    log_entry = "{:<10} {:<15} {:<20.3f} {:<20.3f}".format(
-        pkt[IP].id, str_format_prediction, sec, accuracy
+    log_entry = "{:<10} {:<10} {:<15} {:<20.3f} {:<20.3f}".format(
+        pkt[IP].id, task_id, str_format_prediction, sec, accuracy
     )
 
     log_entries.append(log_entry)
@@ -156,19 +205,50 @@ def handle_pkt(pkt, start_time):
 def receive_packet():
     sniff(iface=iface, prn=lambda pkt: handle_pkt(pkt, start_time), store = False)
 
+def print_task_accuracies():
+    print("\n=== Task-wise Accuracies ===")
+    total_task_accuracy = 0
+    valid_tasks = 0 
+    # packet w/ task_id
+    if args.task_id != 0:
+        task = args.task_id
+        if task_total_predictions[task] > 0:
+            task_accuracies[task] = (task_correct_predictions[task] / task_total_predictions[task]) * 100
+            print(f"Task {task}: {task_accuracies[task]:.3f}%")
+            total_task_accuracy = task_accuracies[task]
+            valid_tasks = 1
+    # packet w/o task_id
+    else:
+        for task in TASKS:
+            if task_total_predictions[task] > 0:
+                task_accuracies[task] = (task_correct_predictions[task] / task_total_predictions[task]) * 100
+                print(f"Task {task}: {task_accuracies[task]:.3f}%")
+                total_task_accuracy += task_accuracies[task]
+                valid_tasks += 1
+    
+    if valid_tasks > 0:
+        avg_task_accuracy = total_task_accuracy / valid_tasks
+        print(f"\nAverage Task Accuracy: {avg_task_accuracy:.3f}%")
+    else:
+        print("\nAverage Task Accuracy: 0.000%")
+    
+    overall_accuracy = (correct_predictions / total_predictions) * 100 if total_predictions > 0 else 0
+    print(f"Overall Accuracy: {overall_accuracy:.3f}%")
+
 def main():
     global iface, start_time, log_file, packet_count
     packet_count = 0
     start_time = time.time()
     load_labels()
 
-    log_file = f"/home/mnc/mnc/MARTINI/magazine/results/RecvPkt_{args.mode}_f{args.f}_t{args.t}.txt"
+    # log_file = f"/mnt/hgfs/MyResearch_vmawre/Research_MALOI/MALOI-master/results/RecvPkt_{args.mode}_f{args.f}_t{args.t}.txt"
+    
 
     iface = "veth2"
     bind_feature_layers(args.f, args.t)
 
-    log_header = "{:<10} {:<15} {:<20} {:<20}".format(
-        "No", "Predictions", "Hop latency [us]", "Accuracy [%]"
+    log_header = "{:<10} {:<10} {:<15} {:<20} {:<20}".format(
+        "No", "Task ID", "Predictions", "Hop latency [us]", "Accuracy [%]"
     )
 
     print(log_header)
@@ -181,11 +261,18 @@ def main():
         while True:
             time.sleep(0.1)  
     except KeyboardInterrupt:
+        # per-task accuracy
+        print_task_accuracies()
         with open(log_file, "w") as f:
             f.write("Predictions: (Task 2, Task 6, Task 10, Task 12, Task 13)\n\n")
             f.write(log_header + '\n')
             for entry in log_entries:
                 f.write(entry + "\n")
+            f.write("\n=== Task-wise Accuracies ===\n")
+            for task in TASKS:
+                f.write(f"Task {task}: {task_accuracies[task]:.3f}%\n")
+            f.write(f"\nAverage Task Accuracy: {sum(task_accuracies.values()) / len(TASKS):.3f}%\n")
+            f.write(f"Overall Accuracy: {(correct_predictions / total_predictions) * 100:.3f}%\n")
         print(f"\nlog saved complete: {log_file}")
 
 if __name__ == '__main__':

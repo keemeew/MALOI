@@ -70,7 +70,7 @@ header labeling_t {
     bit<4> prediction10;
     bit<4> prediction12;
     bit<4> prediction13;
-    bit<4> padding2;
+    bit<4> task_id;
 }
 
 struct headers {
@@ -132,6 +132,12 @@ struct metadata {
     bit<16> task13_2;
     bit<16> task13_3;
     bit<16> task13_4;
+
+    bit<4> predict2;
+    bit<4> predict6;
+    bit<4> predict10;
+    bit<4> predict12;
+    bit<4> predict13;
     
 }
 
@@ -1689,7 +1695,8 @@ control MyIngress(inout headers hdr,
         if(meta.task6_7 > bestVal) {bestVal=meta.task6_7; bestCls=6;}
         if(meta.task6_8 > bestVal) {bestVal=meta.task6_8; bestCls=7;}
 
-        hdr.labeling.prediction6 = bestCls;
+        meta.predict6 = bestCls;
+        //hdr.labeling.prediction6 = bestCls;
     }
     
     action XNOR_task12(bit<90> w) {
@@ -1788,7 +1795,8 @@ control MyIngress(inout headers hdr,
         if (meta.task12_4 > bestVal) { bestVal = meta.task12_4; bestCls = 3; }
         if (meta.task12_5 > bestVal) { bestVal = meta.task12_5; bestCls = 4; }
         if (meta.task12_6 > bestVal) { bestVal = meta.task12_6; bestCls = 5; }
-        hdr.labeling.prediction12 = bestCls;
+        meta.predict12 = bestCls;
+        //hdr.labeling.prediction12 = bestCls;
     }
 
     action XNOR_task10(bit<90> w) {
@@ -1842,7 +1850,8 @@ control MyIngress(inout headers hdr,
         bit<4> bestCls = 0;
         if (meta.task10_2 > bestVal) { bestVal = meta.task10_2; bestCls = 1; }
         if (meta.task10_3 > bestVal) { bestVal = meta.task10_3; bestCls = 2; }
-        hdr.labeling.prediction10 = bestCls;
+        meta.predict10 = bestCls;
+        //hdr.labeling.prediction10 = bestCls;
     }
 
     action XNOR_task2(bit<90> w) {
@@ -1955,7 +1964,8 @@ control MyIngress(inout headers hdr,
         if (meta.task2_6 > bestVal) { bestVal = meta.task2_6; bestCls = 5; }
         if (meta.task2_7 > bestVal) { bestVal = meta.task2_7; bestCls = 6; }
         if (meta.task2_8 > bestVal) { bestVal = meta.task2_8; bestCls = 7; }
-        hdr.labeling.prediction2 = bestCls;
+        meta.predict2 = bestCls;
+        //hdr.labeling.prediction2 = bestCls;
     }
 
     action XNOR_task13(bit<90> w) {
@@ -2016,7 +2026,8 @@ control MyIngress(inout headers hdr,
         if (meta.task13_2 > bestVal) { bestVal = meta.task13_2; bestCls = 1; }
         if (meta.task13_3 > bestVal) { bestVal = meta.task13_3; bestCls = 2; }
         if (meta.task13_4 > bestVal) { bestVal = meta.task13_4; bestCls = 3; }
-        hdr.labeling.prediction13 = bestCls;
+        meta.predict13 = bestCls;
+        //hdr.labeling.prediction13 = bestCls;
     }
 
 
@@ -2278,9 +2289,36 @@ control MyIngress(inout headers hdr,
                 
                 predict_task13();
             }
-        }
 
-        standard_metadata.egress_spec = 1; // need to change
+
+            // NEW CHCEK task_id
+            hdr.labeling.prediction2 = 0;
+            hdr.labeling.prediction6 = 0;
+            hdr.labeling.prediction10 = 0;
+            hdr.labeling.prediction12 = 0;
+            hdr.labeling.prediction13 = 0;
+
+            if (hdr.labeling.task_id == 0) {
+                hdr.labeling.prediction2 = meta.predict2;
+                hdr.labeling.prediction6 = meta.predict6;
+                hdr.labeling.prediction10 = meta.predict10;
+                hdr.labeling.prediction12 = meta.predict12;
+                hdr.labeling.prediction13 = meta.predict13;
+            }
+            else {
+                if (hdr.labeling.task_id == 2)
+                    hdr.labeling.prediction2 = meta.predict2;
+                else if (hdr.labeling.task_id == 6)
+                    hdr.labeling.prediction6 = meta.predict6;
+                else if (hdr.labeling.task_id == 10)
+                    hdr.labeling.prediction10 = meta.predict10;
+                else if (hdr.labeling.task_id == 12)
+                    hdr.labeling.prediction12 = meta.predict12;
+                else if (hdr.labeling.task_id == 13)
+                    hdr.labeling.prediction13 = meta.predict13;
+            }
+        }
+        standard_metadata.egress_spec = 1; // need to change 
     }
 }
 
@@ -2304,7 +2342,7 @@ control MyComputeChecksum(inout headers hdr, inout metadata meta) {
    update_checksum(
        hdr.ipv4.isValid(),
             { hdr.ipv4.version,
-         hdr.ipv4.ihl,
+              hdr.ipv4.ihl,
               hdr.ipv4.tos,
               hdr.ipv4.totalLen,
               hdr.ipv4.identification,
